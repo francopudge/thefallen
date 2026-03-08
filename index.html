@@ -17,7 +17,6 @@
             z-index: 9999;
             transition: opacity 0.5s ease, visibility 0.5s;
         }
-        /* GANTI: Efek Ungu pada Logo Loading */
         .loader-logo { width: 150px; margin-bottom: 20px; filter: drop-shadow(0 0 10px #4b0082); animation: pulse-logo 2s infinite ease-in-out; }
         .loader-text { color: #bf00ff; font-family: 'Courier New', Courier, monospace; font-size: 1.5rem; font-weight: bold; text-shadow: 0 0 10px #4b0082; }
         @keyframes pulse-logo { 0% { transform: scale(1); filter: drop-shadow(0 0 10px #4b0082); } 50% { transform: scale(1.1); filter: drop-shadow(0 0 30px #bf00ff); } 100% { transform: scale(1); filter: drop-shadow(0 0 10px #4b0082); } }
@@ -26,9 +25,9 @@
         * { box-sizing: border-box; }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif; background-color: #000000; color: white; display: flex; flex-direction: column; min-height: 100vh; }
         
-        /* --- HEADER STICKY (Warna Ungu Tua) --- */
+        /* --- HEADER STICKY --- */
         header {
-            background-color: #1a0033; /* Ungu sangat tua */
+            background-color: #1a0033;
             padding: 0 40px;
             height: 80px;
             display: flex;
@@ -37,7 +36,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 3px solid #bf00ff; /* Border Ungu Terang */
+            border-bottom: 3px solid #bf00ff;
             box-shadow: 0 4px 15px rgba(191, 0, 255, 0.4);
         }
         .header-left { display: flex; align-items: center; }
@@ -46,8 +45,7 @@
         .big-letter { font-size: 2.5rem; line-height: 1; }
         .small-letter { font-size: 1.2rem; text-transform: lowercase; }
 
-        /* Tombol Musik Ungu */
-        .music-btn { background: transparent; border: 2px solid #bf00ff; border-radius: 50%; width: 55px; height: 55px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease-in-out; box-shadow: 0 0 10px rgba(191, 0, 255, 0.3); outline: none; padding: 10px; }
+        .music-btn { background: transparent; border: 2px solid #bf00ff; border-radius: 50%; width: 55px; height: 55px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease-in-out; outline: none; padding: 10px; }
         .music-btn img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 5px #bf00ff); }
         .music-btn.playing { background: rgba(191, 0, 255, 0.1); animation: pulse-purple 1.5s infinite; }
         @keyframes pulse-purple { 0% { transform: scale(1); } 70% { transform: scale(1.1); box-shadow: 0 0 15px #bf00ff; } 100% { transform: scale(1); } }
@@ -56,28 +54,27 @@
         main { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 60px 20px; text-align: center; }
         .main-logo { width: 180px; margin-bottom: 20px; filter: drop-shadow(0 0 15px #bf00ff); }
         .welcome-text { font-size: 2.5rem; max-width: 800px; animation: glow 2s ease-in-out infinite alternate; margin-bottom: 10px; }
-        /* Animasi Glow Ungu */
         @keyframes glow { from { text-shadow: 0 0 10px #bf00ff, 0 0 20px #4b0082; } to { text-shadow: 0 0 20px #bf00ff, 0 0 40px #1a0033; } }
         
         .divider { width: 70%; height: 2px; background: linear-gradient(to right, transparent, #bf00ff, transparent); margin: 30px 0; box-shadow: 0 0 10px #bf00ff; }
 
-        /* --- LEADER & CARD STYLE --- */
-        .leader-container { margin-bottom: 10px; font-family: 'Courier New', Courier, monospace; line-height: 1.2; }
-        .leader-title { color: #ffffff; font-size: 2.2rem; font-weight: bold; letter-spacing: 1px; }
-        .leader-name { color: #bf00ff; font-size: 2.8rem; font-weight: 900; text-shadow: 0 0 20px #bf00ff, 0 0 10px #bf00ff; margin-top: 10px; }
+        .leader-container { margin-bottom: 10px; font-family: 'Courier New', Courier, monospace; }
+        .leader-title { color: #ffffff; font-size: 2.2rem; font-weight: bold; }
+        .leader-name { color: #bf00ff; font-size: 2.8rem; font-weight: 900; text-shadow: 0 0 20px #bf00ff; margin-top: 10px; }
         
-        .card-label { color: #bf00ff; font-size: 1.8rem; font-family: 'Courier New', Courier, monospace; font-weight: bold; margin-bottom: 15px; text-shadow: 0 0 10px #bf00ff; }
+        .card-label { color: #bf00ff; font-size: 1.8rem; font-family: 'Courier New', Courier, monospace; font-weight: bold; margin-bottom: 15px; }
         
         .deck-clickable { cursor: pointer; transition: transform 0.3s ease; max-width: 450px; border-radius: 15px; filter: drop-shadow(0 0 15px rgba(191, 0, 255, 0.2)); margin-bottom: 50px; }
         .deck-clickable:hover { transform: scale(1.05); filter: drop-shadow(0 0 25px #bf00ff); }
 
         /* --- MODAL --- */
         .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center; }
-        .modal-content { max-width: 80%; max-height: 80%; filter: drop-shadow(0 0 30px #bf00ff); animation: zoomIn 0.3s ease; }
-        @keyframes zoomIn { from { transform: scale(0); } to { transform: scale(1); } }
-        .close-modal { position: absolute; top: 20px; right: 35px; color: #bf00ff; font-size: 40px; font-weight: bold; cursor: pointer; }
+        .modal-content { max-width: 90%; max-height: 85%; border-radius: 10px; filter: drop-shadow(0 0 30px #bf00ff); animation: zoomIn 0.3s ease; }
+        @keyframes zoomIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .close-modal { position: absolute; top: 20px; right: 35px; color: #bf00ff; font-size: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .close-modal:hover { color: white; transform: scale(1.1); }
 
-        /* --- FOOTER STICKY (Warna Ungu Tua) --- */
+        /* --- FOOTER STICKY --- */
         footer {
             background-color: #1a0033;
             padding: 15px 0;
@@ -91,9 +88,8 @@
             z-index: 1000;
         }
         .footer-logo { height: 30px; margin-left: 15px; filter: drop-shadow(0 0 5px #bf00ff); }
-        .content-filler { height: 100px; width: 100%; }
 
-        @media (max-width: 768px) { .welcome-text { font-size: 1.6rem; } .leader-title { font-size: 1.4rem; } .leader-name { font-size: 1.8rem; } .deck-clickable { max-width: 300px; } header { padding: 0 15px; } }
+        @media (max-width: 768px) { .welcome-text { font-size: 1.6rem; } .leader-title { font-size: 1.4rem; } .leader-name { font-size: 1.8rem; } .deck-clickable { max-width: 300px; } }
     </style>
 </head>
 <body style="overflow: hidden;"> 
@@ -127,10 +123,10 @@
 
         <div class="leader-container">
             <div class="leader-title">Ketua Guild The Fallen:</div>
-            <div class="leader-name">Agung Abenk</div>
+            <div class="leader-name">Ridwan Kristiadi</div>
         </div>
-        <div class="card-label">Bountiful Artemis</div>
-        <img src="artemis.jpg" alt="Deck" class="deck-clickable deck-trigger">
+        <div class="card-label">CrookedCook</div>
+        <img src="cook.png" alt="Deck" class="deck-clickable deck-trigger" data-deck="deck.png">
 
         <div class="divider"></div>
 
@@ -138,15 +134,15 @@
             <div class="leader-title">Member:</div>
             <div class="leader-name">Contoh</div>
         </div>
-        <div class="card-label">Bountiful Artemis</div>
-        <img src="artemis.jpg" alt="Deck" class="deck-clickable deck-trigger">
+        <div class="card-label">Eldlich</div>
+        <img src="eldlich.jpg" alt="Deck" class="deck-clickable deck-trigger" data-deck="deck1.png">
 
-        <div class="content-filler"></div>
+        <div style="height: 50px;"></div>
     </main>
 
     <div id="myModal" class="modal">
         <span class="close-modal" id="closeBtn">&times;</span>
-        <img src="deck.png" alt="Logo Detail" class="modal-content">
+        <img src="" alt="Deck Detail" class="modal-content" id="modalImg">
     </div>
 
     <footer>
@@ -161,6 +157,7 @@
     </footer>
 
     <script>
+        // --- SCRIPT LOADING ---
         function startLoading() {
             let percentDisplay = document.getElementById('percent');
             let loader = document.getElementById('loader');
@@ -176,10 +173,11 @@
                         document.body.style.overflow = 'auto';
                     }, 500);
                 }
-            }, 20);
+            }, 15);
         }
         window.addEventListener('load', startLoading);
 
+        // --- SCRIPT MUSIK ---
         const music = document.getElementById('bgMusic');
         const btn = document.getElementById('musicToggle');
         const iconImg = document.getElementById('musicIcon');
@@ -189,7 +187,7 @@
                 music.play().then(() => {
                     iconImg.src = 'pause.png'; 
                     btn.classList.add('playing');
-                }).catch(err => { alert("Klik lagi!"); });
+                }).catch(err => { alert("Interaksi user diperlukan untuk memutar musik!"); });
             } else {
                 music.pause();
                 iconImg.src = 'play.png';
@@ -197,17 +195,33 @@
             }
         });
 
-        // Script Modal untuk banyak gambar (karena gambarnya sekarang ada dua)
+        // --- SCRIPT MODAL DINAMIS ---
         const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("modalImg");
         const triggers = document.getElementsByClassName("deck-trigger");
         const closeBtn = document.getElementById("closeBtn");
 
+        // Loop untuk memberikan fungsi klik pada setiap gambar deck
         for (let i = 0; i < triggers.length; i++) {
-            triggers[i].onclick = function() { modal.style.display = "flex"; }
+            triggers[i].onclick = function() {
+                modal.style.display = "flex";
+                // Mengambil nilai data-deck (deck.png atau deck1.png) dan memasukkannya ke modal
+                const deckImage = this.getAttribute("data-deck");
+                modalImg.src = deckImage;
+            }
         }
         
-        closeBtn.onclick = function() { modal.style.display = "none"; }
-        window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
+        // Fungsi Tutup
+        closeBtn.onclick = function() { 
+            modal.style.display = "none"; 
+            modalImg.src = ""; // Reset gambar agar ringan
+        }
+        window.onclick = function(event) { 
+            if (event.target == modal) { 
+                modal.style.display = "none"; 
+                modalImg.src = "";
+            } 
+        }
     </script>
 </body>
 </html>
